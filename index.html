@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krushna Chandra Panigrahy – DevOps Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f4;--card:#fff;--ink:#14213d;--mute:#56647a;--line:#d3dce3;--acc:#0f6e8c;--ok:#1f8f5f;--accbg:#dcecf2;color-scheme:light;
+--h:'Bricolage Grotesque',Georgia,'Segoe UI',sans-serif;--b:'Instrument Sans','Segoe UI',system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1626;--card:#16213a;--ink:#e8eef6;--mute:#9aa9bf;--line:#273555;--acc:#5fc0df;--ok:#4cc995;--accbg:#1a3550;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1626;--card:#16213a;--ink:#e8eef6;--mute:#9aa9bf;--line:#273555;--acc:#5fc0df;--ok:#4cc995;--accbg:#1a3550;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--b)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:4px}
+.w{max-width:1000px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:18px;height:56px}
+nav b{font:800 18px var(--h);margin-right:auto}
+nav a{text-decoration:none;font-size:15px;color:var(--mute)}
+nav a:hover{color:var(--ink)}
+button{font:inherit;cursor:pointer;color:inherit}
+.ic{background:none;border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:14px}
+.hero{padding:72px 0 40px}
+h1{font:800 clamp(38px,7vw,68px)/1.02 var(--h);letter-spacing:-.02em;max-width:14ch}
+.role{margin-top:18px;font-size:20px;color:var(--mute);max-width:56ch}
+.role span{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{padding:11px 18px;border-radius:10px;border:1px solid var(--ink);text-decoration:none;font-weight:600;font-size:15px;background:none}
+.btn.p{background:var(--ink);color:var(--bg)}
+.pipe{margin-top:44px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.pipe h2{font:600 15px var(--b);color:var(--mute);margin-bottom:14px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.stages{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.st{border:1px solid var(--line);border-radius:10px;padding:12px;position:relative;overflow:hidden;min-height:78px}
+.st small{display:block;color:var(--mute);font-size:13px}
+.st strong{font:700 16px var(--h)}
+.st i{position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--acc)}
+.st.run i{width:100%;transition:width .9s linear}
+.st.done{background:var(--accbg)}
+.st.done i{width:100%;background:var(--ok)}
+.st .tick{position:absolute;right:10px;top:8px;color:var(--ok);opacity:0;font-weight:700}
+.st.done .tick{opacity:1}
+.log{margin-top:14px;font:500 14px ui-monospace,Menlo,Consolas,monospace;color:var(--mute);min-height:22px}
+.log em{color:var(--ok);font-style:normal}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.stat{padding:14px 0;border-top:2px solid var(--ink)}
+.stat b{display:block;font:800 34px var(--h)}
+.stat span{color:var(--mute);font-size:14px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h3{font:800 clamp(26px,4vw,36px) var(--h);letter-spacing:-.01em;margin-bottom:22px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tab{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;font-size:15px}
+.tab[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:15px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.job h4{font:700 22px var(--h)}
+.job .m{color:var(--mute);font-size:15px;margin:2px 0 12px}
+.job ul{padding-left:20px;display:grid;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.box h4{font:700 19px var(--h);margin-bottom:6px}
+.box p{color:var(--mute);font-size:16px}
+.mail{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.mail code{font:500 16px ui-monospace,Menlo,Consolas,monospace;background:var(--card);border:1px solid var(--line);padding:8px 12px;border-radius:8px;overflow-wrap:anywhere}
+footer{padding:28px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:760px){.stages{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}nav a.h{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.st.run i{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="w"><nav>
+<b>KCP</b><a class="h" href="#work">Experience</a><a class="h" href="#skills">Skills</a><a class="h" href="#projects">Projects</a><a href="#contact">Contact</a>
+<button class="ic" id="theme" aria-label="Toggle light or dark theme">Theme</button>
+</nav></div></header>
+
+<main>
+<div class="w">
+<div class="hero">
+<h1>Krushna Chandra Panigrahy</h1>
+<p class="role"><span>DevOps Engineer</span> at Open Financial Technologies, Bengaluru. I build and run AWS infrastructure on Kubernetes, ECS Fargate and Lambda, with <span id="yrs">3+</span> years of hands-on experience.</p>
+<div class="cta">
+<a class="btn p" href="#contact">Get in touch</a>
+<a class="btn" href="https://github.com/9krushna" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/krushna-chandra-panigrahy/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+
+<div class="pipe" aria-live="polite">
+<h2><span>How I ship: pipeline run</span><button class="ic" id="rerun">Run again</button></h2>
+<div class="stages" id="stages"></div>
+<div class="log" id="log"></div>
+</div>
+
+<div class="stats">
+<div class="stat"><b data-n="40" data-s="%">0</b><span>faster deployments</span></div>
+<div class="stat"><b data-n="99.9" data-s="%">0</b><span>production uptime</span></div>
+<div class="stat"><b data-n="30" data-s="%">0</b><span>less manual operations</span></div>
+<div class="stat"><b data-n="25" data-s="%">0</b><span>fewer downtime incidents</span></div>
+</div>
+</div>
+</div>
+
+<section id="work"><div class="w">
+<h3>Experience</h3>
+<div class="tabs" id="jobtabs"></div>
+<div class="job" id="job"></div>
+</div></section>
+
+<section id="skills"><div class="w">
+<h3>Skills</h3>
+<div class="tabs" id="skilltabs"></div>
+<div class="chips" id="chips"></div>
+</div></section>
+
+<section id="projects"><div class="w">
+<h3>Projects</h3>
+<div class="grid">
+<div class="box"><h4>Microservice release automation</h4><p>CI/CD for 5+ microservices on Kubernetes and Helm. The team moved from weekly to daily releases.</p></div>
+<div class="box"><h4>Central monitoring and alerting</h4><p>Prometheus and Grafana across services, which cut downtime incidents by 25%.</p></div>
+<div class="box"><h4>Multi-environment Terraform</h4><p>Reusable blueprints for AWS environments spanning EKS, ECS/Fargate and Lambda.</p></div>
+</div>
+</div></section>
+
+<section id="edu"><div class="w">
+<h3>Certifications and education</h3>
+<div class="grid">
+<div class="box"><h4>National Apprenticeship Certificate, DevOps Engineer</h4><p>NSDC/NCVET with Open Financial Technologies, 2023.</p></div>
+<div class="box"><h4>AWS Certified Solutions Architect – Associate</h4><p>In progress.</p></div>
+<div class="box"><h4>B.Sc, Berhampur University</h4><p>2018 – 2022. AWS DevOps training at Naresh i Technologies, Hyderabad, 2022.</p></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="w">
+<h3>Contact</h3>
+<div class="mail">
+<code id="em">krushnachandrapanigrahy0@gmail.com</code>
+<button class="btn p" id="copy">Copy email</button>
+<a class="btn" href="mailto:krushnachandrapanigrahy0@gmail.com">Send email</a>
+</div>
+<p style="margin-top:14px;color:var(--mute)" id="copied" role="status"></p>
+</div></section>
+</main>
+<footer><div class="w">© <span id="y"></span> Krushna Chandra Panigrahy</div></footer>
+
+<script>
+const jobs=[
+{t:"Open Financial Technologies",r:"DevOps Engineer",d:"February 2024 – Present",p:["Built Jenkins CI/CD pipelines that cut deployment time by 40%.","Automated provisioning with Helm and Terraform for consistent environments.","Built a serverless microservices layer on AWS Lambda and API Gateway beyond EKS.","Run ECS Fargate workloads for cron jobs and a scheduler, from ECR image builds to deployment.","Wrote shell scripts for log rotation, S3 log backup and Secrets Manager key rotation, reducing manual work by 30%.","Wrote Ansible playbooks for user management and Kubernetes access control.","Monitor production with New Relic, Prometheus, Grafana and Sumologic at 99.9% uptime.","Manage IAM roles, VPC configuration and encryption policies."]},
+{t:"Freelance DevOps Projects",r:"DevOps Engineer",d:"April 2023 – December 2023",p:["Delivered CI/CD pipelines with Jenkins, Git, Docker and Terraform for clients.","Created Terraform modules that cut provisioning from hours to minutes.","Added automated testing and validation to CI/CD workflows.","Designed scalable, cost-efficient cloud infrastructure with clients.","Reduced manual workload by 25% through automation."]}];
+const skills={
+"CI/CD":["Jenkins","GitHub Actions","GitLab CI","Git"],
+"Containers":["Docker","Kubernetes","Helm","Amazon ECS","AWS Fargate","Amazon ECR"],
+"Cloud":["AWS EKS","Lambda","API Gateway","ELB","RDS","Route 53","CloudFormation","CloudWatch"],
+"IaC and config":["Terraform","CloudFormation","Ansible","Shell scripting"],
+"Observability":["Prometheus","Grafana","New Relic","Last9","Sumologic","CloudWatch"],
+"Security and networking":["IAM","VPC","Security groups","Secrets management","Cloudflare","Route 53"],
+"Other":["Nginx","Apache","Linux","MySQL","PostgreSQL","Backup and disaster recovery"]};
+
+const $=s=>document.querySelector(s);
+function tabs(box,items,cb){box.innerHTML="";items.forEach((n,i)=>{const b=document.createElement("button");b.className="tab";b.textContent=n;b.setAttribute("aria-pressed",i==0);b.onclick=()=>{box.querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");cb(n,i)};box.appendChild(b)});cb(items[0],0)}
+tabs($("#jobtabs"),jobs.map(j=>j.t),(n,i)=>{const j=jobs[i];$("#job").innerHTML=`<h4>${j.r}</h4><div class="m">${j.t} · ${j.d}</div><ul>${j.p.map(x=>`<li>${x}</li>`).join("")}</ul>`});
+tabs($("#skilltabs"),["All",...Object.keys(skills)],n=>{const l=n=="All"?[...new Set(Object.values(skills).flat())]:skills[n];$("#chips").innerHTML=l.map(x=>`<span class="chip">${x}</span>`).join("")});
+
+// experience years from start date
+const yrs=(Date.now()-new Date(2023,3,1))/31557600000;$("#yrs").textContent=Math.floor(yrs)+"+";
+$("#y").textContent=new Date().getFullYear();
+
+// pipeline run
+const S=[["Commit","git push"],["Build","Jenkins + Docker"],["Plan","Terraform"],["Deploy","EKS · ECS · Lambda"],["Observe","Grafana · New Relic"]];
+const msgs=["Change pushed to main","Image built and pushed to ECR","Terraform plan reviewed and applied","Rolling deploy finished","Dashboards green: <em>99.9% uptime</em>"];
+const st=$("#stages"),lg=$("#log");let run=0;
+st.innerHTML=S.map(s=>`<div class="st"><span class="tick">✓</span><small>${s[1]}</small><strong>${s[0]}</strong><i></i></div>`).join("");
+const els=[...st.children];
+function go(){const id=++run;els.forEach(e=>e.className="st");lg.innerHTML="";
+const rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+let i=0;(function next(){if(id!==run)return;if(i>0){els[i-1].className="st done"}
+if(i>=els.length){return}
+els[i].className="st run";lg.innerHTML=msgs[i];i++;setTimeout(next,rm?150:950)})()}
+$("#rerun").onclick=go;go();
+
+// count-up stats
+document.querySelectorAll("[data-n]").forEach(e=>{const t=+e.dataset.n,dec=t%1?1:0,t0=performance.now();
+(function f(n){const p=Math.min((n-t0)/1400,1);e.textContent=(t*p).toFixed(dec)+e.dataset.s;if(p<1)requestAnimationFrame(f)})(t0)});
+
+// theme + copy
+$("#theme").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark"};
+$("#copy").onclick=async()=>{try{await navigator.clipboard.writeText($("#em").textContent);$("#copied").textContent="Email copied."}catch(e){$("#copied").textContent="Copy failed. Select the address and copy it manually."}};
+</script>
+</body>
+</html>
